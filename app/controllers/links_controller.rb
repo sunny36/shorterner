@@ -10,7 +10,7 @@ class LinksController < ApplicationController
   def create
     @link = Link.new(link_params)
     if @link.save
-      flash[:success] = "Product created"
+      flash[:success] = "Link created!"
       redirect_to link_path(@link)
     else
       render 'new'
@@ -24,20 +24,22 @@ class LinksController < ApplicationController
   def update
     @link = Link.find(params[:id])
     if @link.update(link_params)
-      flash[:success] = "Product updated"
+      flash[:success] = "Link updated!"
       redirect_to links_path
     else
       render 'edit'
     end
   end
 
+  def show
+    @link = Link.find(params[:id])
+  end
+
   def destroy
     @link = Link.find(params[:id])
     @link.destroy
-    redirect_to admin_products_path
+    redirect_to links_path
   end
-
-
   private
 
   def link_params

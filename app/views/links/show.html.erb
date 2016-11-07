@@ -1,1 +1,10 @@
-<dl></dl>
+<dl>
+  <dt>Source Url</dt>
+  <dd><%= @link.source_url %></dd>
+  <dt>Shorten Url</dt>
+  <dd><%= @link.slug %></dd>
+  <dt>Clicks</dt>
+  <dd><%= @link.clicks %></dd>
+</dl>
+
+<%= link_to "Back to all links", links_path %>
