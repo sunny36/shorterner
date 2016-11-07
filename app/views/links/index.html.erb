@@ -9,6 +9,7 @@
       <thead>
         <tr>
           <th>Source Url</th>
+          <th>Destination Url</th>
           <th>Slug</th>
           <th>Actions</th>
         </tr>
@@ -17,6 +18,7 @@
         <% @links.each do |link| %>
           <tr>
             <td><%= link.source_url %></td>
+            <td><%= ENV["DEFAULT_HOST"] || "http://localhost:300/#{link.slug}" %></td>
             <td><%= link.slug %></td>
             <td>
               <%= link_to "Delete", link_path(link), method: :delete %>
