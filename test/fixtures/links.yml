@@ -4,8 +4,12 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+google:
+  source_url: "http://www.google.com"
+  slug: "123bn5"
+  clicks: 0
+
+yahoo:
+  source_url: "http://www.yahoo.com"
+  slug: "123b45"
+  clicks: 0

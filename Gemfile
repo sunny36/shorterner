@@ -15,6 +15,9 @@ gem 'active_model_serializers'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'guard'
+  gem 'guard-minitest'
+  gem 'minitest-reporters'
 end
 
 group :development do

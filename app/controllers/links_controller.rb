@@ -40,6 +40,8 @@ class LinksController < ApplicationController
     @link.destroy
     redirect_to links_path
   end
+
+
   private
 
   def link_params
