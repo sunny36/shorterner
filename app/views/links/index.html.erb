@@ -1,0 +1,31 @@
+<div class="row">
+    <%= link_to 'New Link', new_link_path, class: "btn btn-default pull-right" %>
+</div>
+
+
+<div class="row">
+  <% if @links.present? %>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Source Url</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @links.each do |link| %>
+          <tr>
+            <td><%= link.source_url %></td>
+            <td>
+              <%= link_to "Delete", link_path(link), method: :delete %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>No links</p>
+  <% end %>
+</div>
+
+

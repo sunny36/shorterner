@@ -1,6 +1,6 @@
 class Link < ApplicationRecord
   validates :source_url, presence: true
-  validates :slug, presence: true,
+  validates :slug, presence: true
 
   before_validation :generate_slug, on: :create
 
